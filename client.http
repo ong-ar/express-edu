@@ -1,0 +1,89 @@
+@URL=http://localhost:8080
+
+GET {{URL}}
+
+### GET query test
+GET {{URL}}/get/query?query=request
+
+### GET param test
+GET {{URL}}/get/param/request
+
+### GET body test
+GET {{URL}}/get/body
+content-type: application/json
+
+{
+    "body": "request"
+}
+
+### ------------------------------------------
+
+### POST query test
+POST {{URL}}/post/query?query=request
+
+### POST param test
+POST {{URL}}/post/param/request
+
+### POST body test
+POST {{URL}}/post/body
+content-type: application/json
+
+{
+    "body": "request"
+}
+
+### ------------------------------------------
+
+### PUT query test
+PUT {{URL}}/put/query?query=request
+
+### PUT param test
+PUT {{URL}}/put/param/request
+
+### PUT body test
+PUT {{URL}}/put/body
+content-type: application/json
+
+{
+    "body": "request"
+}
+
+### ------------------------------------------
+
+### DELETE query test
+DELETE {{URL}}/delete/query?query=request
+
+### DELETE param test
+DELETE {{URL}}/delete/param/request
+
+### DELETE body test
+DELETE {{URL}}/delete/body
+content-type: application/json
+
+{
+    "body": "request"
+}
+
+### ------------------------------------------
+
+### STATUS 404
+GET {{URL}}/404
+
+### STATUS 204
+GET {{URL}}/204
+
+### ------------------------------------------
+
+### GET variable
+GET {{URL}}/variable
+
+### POST variable
+POST {{URL}}/variable
+Content-Type: application/json
+
+{
+    "variable": "3"
+}
+
+### DELETE variable
+DELETE {{URL}}/variable
